@@ -8,6 +8,7 @@ public class Main {
 
         Player rakhat = new Player(1, "Rakhat", 18);
         Player rauan = new Player(2, "Rauan", 15);
+        Player anotherRakhat = new Player(1, "Rakhat", 18);
 
         club.addSport(football);
         club.addSport(tennis);
@@ -17,5 +18,8 @@ public class Main {
 
         Management management = new Management();
         management.showClubInfo(club);
+
+        System.out.println("\nСравнение игроков:");
+        System.out.println("rakhat.equals(anotherRakhat)? " + rakhat.equals(anotherRakhat));
     }
 }

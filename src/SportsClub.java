@@ -10,12 +10,9 @@ public class SportsClub {
         this.name = name;
     }
 
-    public void addSport(Sport sport) {
-        sports.add(sport);
-    }
-
-    public void addPlayer(Player player) {
-        players.add(player);
+    // Getters
+    public String getName() {
+        return name;
     }
 
     public List<Sport> getSports() {
@@ -26,7 +23,23 @@ public class SportsClub {
         return players;
     }
 
-    public String getName() {
-        return name;
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Методы добавления
+    public void addSport(Sport sport) {
+        sports.add(sport);
+    }
+
+    public void addPlayer(Player player) {
+        players.add(player);
+    }
+
+    // toString
+    @Override
+    public String toString() {
+        return "SportsClub: " + name + ", Sports=" + sports + ", Players=" + players;
     }
 }

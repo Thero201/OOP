@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Player {
     private int id;
     private String name;
@@ -9,6 +11,11 @@ public class Player {
         this.age = age;
     }
 
+    // Getters
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -17,8 +24,36 @@ public class Player {
         return age;
     }
 
+    // Setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // toString
     @Override
     public String toString() {
-        return "Player: " + name + ", age=" + age;
+        return "Player: " + name + ", age=" + age + " (id=" + id + ")";
+    }
+
+    // equals для сравнения объектов
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Player)) return false;
+        Player player = (Player) o;
+        return id == player.id && age == player.age && Objects.equals(name, player.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, age);
     }
 }

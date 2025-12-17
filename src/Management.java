@@ -5,12 +5,12 @@ public class Management {
 
         System.out.println("Sports:");
         for (Sport sport : club.getSports()) {
-            System.out.println("- " + sport.getName());
+            System.out.println("- " + sport);
         }
 
         System.out.println("Players:");
         for (Player player : club.getPlayers()) {
-            System.out.println("- " + player.getName());
+            System.out.println("- " + player);
         }
     }
 }
