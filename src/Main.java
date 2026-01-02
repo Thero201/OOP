@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -16,10 +18,27 @@ public class Main {
         club.addPlayer(rakhat);
         club.addPlayer(rauan);
 
-        Management management = new Management();
-        management.showClubInfo(club);
+        club.showClubInfo();
+
 
         System.out.println("\nСравнение игроков:");
         System.out.println("rakhat.equals(anotherRakhat)? " + rakhat.equals(anotherRakhat));
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("\nEnter new player name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter age: ");
+        int age = scanner.nextInt();
+
+        Player newPlayer = new Player(3, name, age);
+        club.addPlayer(newPlayer);
+
+        System.out.println("\nAfter adding new player:");
+        club.showClubInfo();
+
+        scanner.close();
+
     }
 }

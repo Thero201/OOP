@@ -33,7 +33,7 @@ public class Sport {
         return "Sport: " + name + " (id=" + id + ")";
     }
 
-    // equals для сравнения объектов
+    // equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
