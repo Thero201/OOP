@@ -61,11 +61,10 @@ public class SportsClub {
     }
 
     // Sorting
-    public List<Player> getPlayersSortedByAge() {
-        return players.stream()
-                .sorted(Comparator.comparingInt(Player::getAge))
-                .collect(Collectors.toList());
+    public void sortPlayersByAge() {
+        players.sort(Comparator.comparingInt(Player::getAge));
     }
+
 
     public void showClubInfo() {
         System.out.println("=== Sports Club: " + name + " ===");
