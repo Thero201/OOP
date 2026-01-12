@@ -39,11 +39,16 @@ public class SportsClub {
     }
 
     // Filtering
-    public List<Player> getPlayersOlderThan(int age) {
-        return players.stream()
-                .filter(p -> p.getAge() > age)
-                .collect(Collectors.toList());
+    public List<Player> filterPlayersByAge(int minAge) {
+        List<Player> result = new ArrayList<>();
+        for (Player p : players) {
+            if (p.getAge() >= minAge) {
+                result.add(p);
+            }
+        }
+        return result;
     }
+
 
     // Searching
     public Player findPlayerByName(String name) {
