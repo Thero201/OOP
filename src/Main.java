@@ -40,5 +40,19 @@ public class Main {
 
         scanner.close();
 
+
+        Player player1 = new Player(1, "Rakhat", 18);
+
+        PlayerDAO.addPlayer(player1);
+
+        System.out.println("All players:");
+        PlayerDAO.getAllPlayers();
+
+
+        PlayerDAO.updatePlayerAge(1, 20);
+
+
+        PlayerDAO.deletePlayer(1);
+
     }
 }

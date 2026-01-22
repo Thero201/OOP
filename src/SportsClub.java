@@ -65,7 +65,6 @@ public class SportsClub {
         players.sort(Comparator.comparingInt(Player::getAge));
     }
 
-
     public void showClubInfo() {
         System.out.println("=== Sports Club: " + name + " ===");
 
